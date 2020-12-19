@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addchange() {
+            var x = document.forms["inputformla"]["formula"].value;
+            x.replace("+",%2B);
+        }
+        </script>
+</head>
+<body>
+    <div style="width: 1600px;">
+    <div id="header" style="background-color: coral;height: 100px;">Header </div>
+    <span id="leftcontent" style="background-color: blueviolet;height:200px;width:800px;float:left ">
+        <form name="input" action="http://localhost:8080/hello" onsubmit="return addchange()" method="post">
+        Username: <input type="text" name="username">
+        <input type="submit" value="Submit">
+        </form></span>
+    <span id="rightcontent" style="background-color: blue;height:200px;width:800px;float:right ">
+        <form name="inputformula" action="http://localhost:8080/cal" onsubmit="return addchange()" method="get">
+        formula: <input type="text" name="formula">
+        <input type="submit" value="Submit">
+        </form></span>
+    <div id="footer" style="background-color: rgb(207, 40, 137);clear:both;text-align:center;height: 100px;">
+        footer </div>
+    </div>
+</body>
+</html>
